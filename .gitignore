@@ -24,13 +24,16 @@ build/Release
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
 
-# Ignore .env configuration files
+# .env configuration files
 .env
 
-# Ignore .DS_Store files on OS X
+# Design documents
+design
+
+# .DS_Store files on OS X
 .DS_Store
 
-# Ignore workspace configurations
+# workspace configurations
 .vscode
 .idea/
 *.sublime-*

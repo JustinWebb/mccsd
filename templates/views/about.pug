@@ -1,0 +1,58 @@
+extends ../layouts/default
+
+block content
+
+  section.container.about-group
+
+    .story
+
+      h1 Marin City's Development
+
+      p Prior to World War II, the land that would become Marin City was home to a dairy farm and a handful of families. Soon after war was declared on December 8, 1941, Marin City was rapidly built during 1942 in order to house 6000 of the 20,000 workers who migrated from all over the United States, attracted by the jobs at Marinship— the Sausalito waterfront shipyard. A total of 93 liberty ships and tankers were built and launched from Marinship in less than three years.
+      
+      p This "instant community," constructed by a joint venture between the federal government and the Marin County Housing Authority, which was created to manage the project, boasted 2,700 dormitory and apartment units; a school; a public library; a variety of stores, cafes, barber/beauty shops; a health facility; and a community center.
+      
+      p The country's first integrated federal housing project, Marin City at its peak had a population of 6,500 people, including over 1,000 school aged children. Marin City was home to midwestern whites (85%), southern blacks (10%), and Chinese immigrants (5%) who worked around the clock in the Bechtel-owned Marinship Shipyards.
+      
+      p After the war ended, many of the African American shipyard laborers who had migrated from the Southern U.S. became permanent residents of Marin City either by choice or due to various racial discriminatory laws limiting housing opportunities in other parts of Marin County. In contrast to war times, when African Americans comprised only 10% of Marin City's population, they soon became the core of the community while the majority of guest laborers departed at the end of the war.
+      
+      p By 1958, a Redevelopment Agency was formed, with the sole purpose of constructing a permanent Marin City. The Urban Renewal Plan for Marin City was adopted. The Plan called for the building of public housing, single family homes, cooperative apartments, commercial facilities, and a high school. The high school was to be built by the Tamalpais High School District who had purchased thirty-two acres of the "bowl area," the flats and lower ridge section of the community.
+      
+      p By 1962, the 6,500 population had been reduced to 1,300. The white and Chinese population was virtually gone, leaving behind a community that was now 90% African American. The wartime housing was torn down and in its place 300 public housing units, 82 single family homes, and 104-unit cooperative was built.
+      
+      p By 1978, construction on the hillside had begun. Eventually, 198 market-rate apartments and 235 townhouses and condominiums were completed in the Headlands. Shortly after this time, the diversity of the community increased.
+      
+      p During the 1980s and 1990s there was considerable residential and commercial development, including several new housing developments, apartment complexes, and condo developments. There was also an expansion of commercial area particularly with the building of the Gateway Shopping Center that displaced the locally renowned flea market.
+      
+      p Currently, Marin City is the most diverse community in Marin County. There are approximately 4,000 residents of which approximately 40% are African-American, 33% are White, 10% are Hispanic, 8% are Asian/Pacific Islander, and 9% Other.
+      
+      p Marin City continues to grow as a community and remains a resilient community of promise. The municipal authority for Marin City is the Marin City Community Services District (District), a multi-purpose California special district that is governed by a publicly-elected five-member board of directors. The District’s programs are administered by staff. The District seeks to lead the community into the future in concert with its residents, community- based organizations and faith-based leadership.
+
+  section.container.about-group
+    
+    h1 Board of Directors
+
+    if board.length
+      ul.board-members-list
+        each boardMember, i in board
+          li.board-member
+            h2 #{boardMember.fullname}, #{boardMember.title}
+            .description
+              .portrait
+                img(src="images/" + boardMember.portrait, alt="Picture of " + boardMember.fullname)
+              p #{boardMember.story}
+
+  section.container.about-group
+
+    h1 District Staff
+
+    if staff.length
+      ul.staff-members-list
+        each staffer, i in staff
+          li.staff-member
+            h2 #{staffer.fullname}
+              span.subtitle #{staffer.title}
+            .description
+              .portrait
+                img(src="images/" + staffer.portrait, alt="Picture of " + staffer.fullname)
+              p #{staffer.story}

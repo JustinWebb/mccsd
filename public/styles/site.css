@@ -5825,12 +5825,292 @@ button.close {
   margin-top: 30px; }
 
 #footer {
+  color: #777777;
   margin-top: 30px;
   border-top: 1px solid #eeeeee;
-  padding-top: 30px;
-  color: #777777; }
+  padding-top: 30px; }
 
 .gallery-image img {
   display: block;
   max-width: 100%;
   height: auto; }
+
+footer#footer .business-info {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 120px;
+  margin-bottom: 36px; }
+  @media (min-width: 768px) {
+    footer#footer .business-info {
+      float: left;
+      width: 58.33333%; } }
+  footer#footer .business-info:before, footer#footer .business-info:after {
+    content: " ";
+    display: table; }
+  footer#footer .business-info:after {
+    clear: both; }
+  footer#footer .business-info .watermark {
+    width: 100%;
+    margin-bottom: 12px; }
+    footer#footer .business-info .watermark img {
+      max-width: 100%; }
+  footer#footer .business-info .address-card .address {
+    margin-bottom: 12px; }
+    footer#footer .business-info .address-card .address span {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.92857; }
+      footer#footer .business-info .address-card .address span.addr-line {
+        display: block; }
+      footer#footer .business-info .address-card .address span.addr-data {
+        display: inline;
+        margin-right: 4px; }
+  footer#footer .business-info .address-card .link-data {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 2.62857; }
+    footer#footer .business-info .address-card .link-data:before, footer#footer .business-info .address-card .link-data:after {
+      content: " ";
+      display: table; }
+    footer#footer .business-info .address-card .link-data:after {
+      clear: both; }
+    footer#footer .business-info .address-card .link-data svg {
+      width: 24px;
+      height: 36px;
+      padding-right: 10px;
+      float: left; }
+  @media (min-width: 768px) {
+    footer#footer .business-info {
+      margin-bottom: 0; }
+      footer#footer .business-info .watermark {
+        width: 144px;
+        height: 90px;
+        position: absolute;
+        bottom: 0;
+        float: left; }
+      footer#footer .business-info .address-card {
+        float: left;
+        margin-left: 168px; }
+        footer#footer .business-info .address-card .address {
+          margin-bottom: 6px; }
+          footer#footer .business-info .address-card .address span {
+            font-size: 14px;
+            line-height: 1.62857; }
+        footer#footer .business-info .address-card .link-data {
+          font-size: 13px;
+          line-height: 1.42857; }
+          footer#footer .business-info .address-card .link-data svg {
+            height: 24px; } }
+
+footer#footer .follow-us {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 36px; }
+  @media (min-width: 768px) {
+    footer#footer .follow-us {
+      float: left;
+      width: 33.33333%; } }
+  footer#footer .follow-us h1 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #000000; }
+  footer#footer .follow-us ul.social-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    footer#footer .follow-us ul.social-list li {
+      display: inline; }
+    footer#footer .follow-us ul.social-list li {
+      margin-right: 24px; }
+      footer#footer .follow-us ul.social-list li img {
+        width: 24px;
+        height: 24px; }
+
+footer#footer .secondary-nav {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    footer#footer .secondary-nav {
+      float: left;
+      width: 8.33333%; } }
+  footer#footer .secondary-nav ul.footer-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    footer#footer .secondary-nav ul.footer-nav-list li {
+      padding: 6px 0; }
+      footer#footer .secondary-nav ul.footer-nav-list li a {
+        display: block; }
+
+footer#footer .powered-by {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 36px;
+  font-size: 12px; }
+  @media (min-width: 768px) {
+    footer#footer .powered-by {
+      float: left;
+      width: 100%; } }
+
+h1 {
+  margin-bottom: 36px; }
+
+h2 {
+  margin-bottom: 18px; }
+
+.welcome {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .welcome {
+      float: left;
+      width: 100%; } }
+  .welcome p {
+    margin-bottom: 48px;
+    font-size: 18px; }
+
+.features .feature {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 60px;
+  margin-bottom: 27px; }
+  @media (min-width: 768px) {
+    .features .feature {
+      float: left;
+      width: 33.33333%; } }
+  .features .feature p {
+    margin-top: 18px;
+    position: relative; }
+  .features .feature .disc {
+    width: 80px;
+    margin: 0 auto; }
+    .features .feature .disc img {
+      max-width: 100%; }
+
+.container.about-group .story {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .container.about-group .story {
+      float: left;
+      width: 100%; } }
+
+@media (min-width: 768px) {
+  .container.about-group {
+    margin-bottom: 36px; } }
+
+.about-group .board-members-list,
+.about-group .staff-members-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .about-group .board-members-list .board-member,
+  .about-group .board-members-list .staff-member,
+  .about-group .staff-members-list .board-member,
+  .about-group .staff-members-list .staff-member {
+    margin-bottom: 24px; }
+    .about-group .board-members-list .board-member h2,
+    .about-group .board-members-list .staff-member h2,
+    .about-group .staff-members-list .board-member h2,
+    .about-group .staff-members-list .staff-member h2 {
+      font-size: 30px; }
+    .about-group .board-members-list .board-member .subtitle,
+    .about-group .board-members-list .staff-member .subtitle,
+    .about-group .staff-members-list .board-member .subtitle,
+    .about-group .staff-members-list .staff-member .subtitle {
+      display: block;
+      margin: 6px 0;
+      font-size: 24px; }
+    .about-group .board-members-list .board-member .description:before, .about-group .board-members-list .board-member .description:after,
+    .about-group .board-members-list .staff-member .description:before,
+    .about-group .board-members-list .staff-member .description:after,
+    .about-group .staff-members-list .board-member .description:before,
+    .about-group .staff-members-list .board-member .description:after,
+    .about-group .staff-members-list .staff-member .description:before,
+    .about-group .staff-members-list .staff-member .description:after {
+      content: " ";
+      display: table; }
+    .about-group .board-members-list .board-member .description:after,
+    .about-group .board-members-list .staff-member .description:after,
+    .about-group .staff-members-list .board-member .description:after,
+    .about-group .staff-members-list .staff-member .description:after {
+      clear: both; }
+    .about-group .board-members-list .board-member .description .portrait,
+    .about-group .board-members-list .staff-member .description .portrait,
+    .about-group .staff-members-list .board-member .description .portrait,
+    .about-group .staff-members-list .staff-member .description .portrait {
+      width: 144px;
+      height: 144px;
+      margin-right: 18px;
+      margin-bottom: 6px;
+      float: left; }
+      .about-group .board-members-list .board-member .description .portrait img,
+      .about-group .board-members-list .staff-member .description .portrait img,
+      .about-group .staff-members-list .board-member .description .portrait img,
+      .about-group .staff-members-list .staff-member .description .portrait img {
+        max-width: 100%;
+        max-height: 100%; }
+
+@media (min-width: 768px) {
+  .about-group .board-member .description .portrait,
+  .about-group .staff-member .description .portrait {
+    margin-right: 36px;
+    margin-bottom: 12px; } }
+
+.container.donate {
+  margin-bottom: 48px; }
+  .container.donate .story {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .container.donate .story {
+        float: left;
+        width: 100%; } }
+    .container.donate .story .donate-cta {
+      margin-top: 36px;
+      text-align: center; }
+
+.form-shell {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .form-shell {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 768px) {
+    .form-shell {
+      margin-left: 16.66667%; } }
+  @media (min-width: 992px) {
+    .form-shell {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 992px) {
+    .form-shell {
+      margin-left: 25%; } }
+  .form-shell .form-actions {
+    text-align: right; }

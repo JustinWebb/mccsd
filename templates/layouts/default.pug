@@ -5,25 +5,27 @@ html
 
 	//- HTML HEADER
 	head
-		meta(charset="utf-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
 
-		title= title || 'mccsd'
-		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		title= title || 'Marin City Community Services District'
+		link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
 
 		//- Customise the stylesheet for your site by editing /public/styles/site.sass
-		link(href="/styles/site.css", rel="stylesheet")
+		link(href='/styles/site.css', rel='stylesheet')
+
+		script(src='/js/glyph/iconwc.js')
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
-			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+			link(href='/keystone/styles/content/editor.min.css', rel='stylesheet')
 
 		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8
 		//-[if lt IE 9]
-			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
-			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+			script(src='//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js')
+			script(src='//cdn.jsdelivr.net/respond/1.4.2/respond.min.js')
 		//-[endif]
 
 		//- Include template-specific stylesheets by extending the css block
@@ -36,12 +38,12 @@ html
 	body
 
 		//- HEADER
-		#header: .container
+		header#header: .container
 
 			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
 			//- ... or completely change this header to suit your design.
 
-			div(role="navigation").navbar.navbar-default
+			div(role='navigation').navbar.navbar-default
 				.container-fluid
 					.navbar-header
 						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
@@ -49,7 +51,7 @@ html
 							span.icon-bar
 							span.icon-bar
 							span.icon-bar
-						a.navbar-brand(href='/') mccsd
+						a.navbar-brand(href='/') MCCSD Web
 					.collapse.navbar-collapse
 						ul.nav.navbar-nav.navbar-left
 							each link in navLinks
@@ -63,7 +65,7 @@ html
 								li: a(href='/keystone/signin') Sign In
 
 		//- BODY
-		#body
+		main#body
 
 			//- NOTE:
 			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
@@ -79,12 +81,42 @@ html
 			//- The content block should contain the body of your template's content
 			block content
 
-
 		//- FOOTER
-		.container: #footer
+		footer#footer: .container
+		
+			.business-info(itemscope, itemtype='http://schema.org/Organization')
+				.watermark
+					img(src='images/mccsd-logo.png', alt='Marin City Community Services District')
+				.address-card
+					.address(itemprop='address', itemscope, itemtype='http://schema.org/PostalAddress')
+						span.addr-line(itemprop='streetAddress') 630 Drake Avenue
+						span.addr-data(itemprop='addressLocality') Marin City,
+						span.addr-data(itemprop='addressRegion') CA
+						span.addr-data(itemprop='postalCode') 94965
+					.link-data(itemprop='telephone')
+						svg-icon: src(href='images/sprite.svg#si-glyph-call')
+						a(href='tel:+14153321441') (415) 332-1441
+					.link-data(itemprop='faxNumber')
+						svg-icon: src(href='images/sprite.svg#si-glyph-phone-fax')
+						a(href='fax:+14153329225') (415) 332-9225
+					.link-data(itemprop='email')
+						svg-icon: src(href='images/sprite.svg#si-glyph-mail')
+						a(href='mailto:info@marincitygov.org') info@marincitygov.org
+			
+			.follow-us
+				h1 Follow Us
+				ul.social-list
+					li: a(href='https://www.youtube.com/user/MarinCityCSD'): img(src='images/youtube-logo.svg')
+					li: a(href='https://www.facebook.com/marincitycommunitySD/'): img(src='images/facebook-letter-logo.svg')
+					li: a(href='https://twitter.com/MarinCityCSD'): img(src='images/twitter-logo.svg')
+
+			nav.secondary-nav
+				ul.footer-nav-list
+					each link in navLinks
+						li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			.powered-by: p Powered by <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a>.
 
 
 		//- JAVASCRIPT

@@ -1,0 +1,32 @@
+$site-index-feature-icon-size: 80px;
+
+.welcome {
+  @include make-md-column(12);
+  p {
+    margin-bottom: $padding-base-vertical * 8;
+    font-size: $font-size-large;
+  }
+}
+
+.features .feature {
+  @include make-sm-column(4);
+  min-height: 60px;
+  margin-bottom: $vspacing * .75;
+
+  p {
+    margin-top: $vspacing / 2;
+    position: relative;
+  }
+
+  .disc {
+    width: $site-index-feature-icon-size;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @include breakpoint-bs-atleast(sm) {
+    p {}
+  }
+}

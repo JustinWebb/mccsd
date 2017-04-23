@@ -13,10 +13,16 @@
 // use in your site stylesheets.
 
 @import "site/variables";
+@import "site/site-variables";
+@import "site/site-mixins";
 
 
 // Site Styles
 // ===========
 
 // Add your own site style includes here
-@import "site/layout";
+@import "site/layouts/default";
+@import "site/layouts/index";
+@import "site/layouts/about";
+@import "site/layouts/donate";
+@import "site/layouts/contact";

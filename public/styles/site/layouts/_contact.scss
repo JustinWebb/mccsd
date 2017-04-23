@@ -1,0 +1,11 @@
+
+.form-shell {
+    @include make-sm-column(8);
+    @include make-sm-column-offset(2);
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
+
+    .form-actions {
+        text-align: right;
+    }
+}

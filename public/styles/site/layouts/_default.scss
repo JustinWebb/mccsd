@@ -1,0 +1,144 @@
+
+#header {
+  margin-top: 30px;
+}
+
+#footer {
+  color: #777777;
+  margin-top: 30px;
+  border-top: 1px solid #eeeeee;
+  padding-top: 30px;
+}
+
+.gallery-image img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+footer#footer {
+
+  .business-info {
+    @include make-sm-column(7);
+    @include clearfix;
+    position: relative;
+    min-height: 120px;
+    margin-bottom: $vspacing;
+    .watermark {
+      @include resp-img;
+      margin-bottom: $padding-base-vertical * 2;
+    }
+    .address-card {
+      .address {
+        margin-bottom: $padding-base-vertical * 2;
+        span {
+          width: 100%;
+          font-size: $font-size-base + 2;
+          line-height: $line-height-base + .5;
+          &.addr-line {
+            display: block;
+          }
+          &.addr-data {
+            display: inline;
+            margin-right: 4px;
+          }
+        }
+      }      
+      .link-data {
+        @include clearfix;
+        display: block;
+        width: 100%;
+        font-size: $font-size-base;
+        line-height: $line-height-base + 1.2;
+        svg {
+          width: 24px;
+          height: 36px;
+          padding-right: 10px;
+          float: left;
+        }
+      }
+    }
+
+    @include breakpoint-bs-atleast(sm) {
+      margin-bottom: 0;
+      .watermark {
+        width: 144px;
+        height: 90px;
+        position: absolute;
+        bottom: 0;
+        float: left;
+      }
+      .address-card {
+        float: left;
+        margin-left: 144px + ($padding-base-vertical * 4);
+        .address {
+           margin-bottom: $padding-base-vertical;
+          span {
+            font-size: $font-size-base;
+            line-height: $line-height-base + .2;
+          }
+        }
+        .link-data {
+          font-size: $font-size-base - 1;
+          line-height: $line-height-base;
+          svg {
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .follow-us {
+    @include make-sm-column(4);
+    margin-bottom: $vspacing;
+    h1 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 18px;
+      color: #000000;
+    }
+    ul.social-list {
+      @include list-horizontal;
+      li {
+        margin-right: $padding-base-vertical * 4;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .secondary-nav {
+    @include make-sm-column(1);
+    ul.footer-nav-list {
+      @include list-vertical;
+      li {
+        padding: 6px 0;
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .powered-by {
+    @include make-sm-column(12);
+    margin-top: $vspacing;
+    font-size: 12px;;
+  }
+}
+
+// -------------------------------------------------------------------
+// Typography
+// -------------------------------------------------------------------
+h1 {
+  margin-bottom: $vspacing;
+}
+
+h2 {
+  margin-bottom: $hspacing / 4;
+}

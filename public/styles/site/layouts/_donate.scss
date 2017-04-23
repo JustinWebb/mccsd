@@ -1,0 +1,10 @@
+.container.donate {
+  margin-bottom: $padding-base-vertical * 8;
+  .story {
+    @include make-sm-column(12);
+    .donate-cta {
+        margin-top: $vspacing;
+        text-align: center;
+    }
+  }
+}
