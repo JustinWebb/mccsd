@@ -7,8 +7,8 @@ exports = module.exports = function (req, res) {
 
     // locals.section is used to set the active item in
     // the site navigation
-	locals.section = 'donate';
+	locals.section = 'governance';
 
     // Render the view
-	view.render('donate');
+	view.render('governance');
 };

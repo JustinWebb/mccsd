@@ -15,21 +15,15 @@ Member.add({
 		{ value: 'staff', label: 'Staff Member' },
 		{ value: 'board', label: 'Board Member' },
 	] },
-	firstName: { type: String },
-	lastName: { type: String },
-	title: { type: String },
+	firstName: { type: String, required: true, initial: false },
+	lastName: { type: String, required: true, initial: false },
+	title: { type: String, required: true, initial: false },
 	portrait: { type: String },
-	story: { type: Types.Textarea, min: 100, max: 600 },
+	story: { type: Types.Textarea, min: 100, max: 600, required: true, initial: false },
 });
 
 Member.schema.virtual('fullname').get(function () {
 	return this.firstName + ' ' + this.lastName;
-});
-
-Member.schema.virtual('portraitSrc').get(function () {
-	var img = this.firstName + '-' + this.lastName + '.jpg';
-	var path = ['images', this.memberType.value, img].join('/');
-	return ;
 });
 
 Member.register();
