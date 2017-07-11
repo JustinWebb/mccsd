@@ -6,17 +6,8 @@ var Types = keystone.Field.Types;
  * ===========
  * A database model for uploading images to the local file system
  */
-
-var SCHEMA_TYPES = {
-	size: Number,           // on by default; the size of the file
-	mimetype: String,       // on by default; the mime type of the file
-	path: String,           // the path (e.g directory) the file is stored in; not the full path to the file
-	originalname: String,   // the original (uploaded) name of the file; useful when filename is generated
-	url: String,            // publicly accessible URL of the stored file
-};
-
 var FileUpload = new keystone.List('FileUpload', {
-	defaultColumns: 'filename, uploadDate',
+	defaultColumns: 'name, createdTimeStamp, assetType',
 });
 
 var myStorage = new keystone.Storage({
@@ -24,7 +15,18 @@ var myStorage = new keystone.Storage({
 	fs: {
 		path: keystone.expandPath('./public/uploads/files'), // required; path where the files should be stored
 		publicPath: '/public/uploads/files', // path where files will be served
+		size: true,
+		mimetype: true,
+		originalname: true,
+		url: true,
 	},
+	// schema: {
+	// 	size: true,
+	// 	mimetype: true,
+	// 	path: false,
+	// 	originalname: true,
+	// 	url: true,
+	// },
 });
 
 FileUpload.add({
@@ -33,15 +35,17 @@ FileUpload.add({
 		type: Types.File,
 		storage: myStorage,
 	},
-	createdTimeStamp: { type: String },
-	alt1: { type: String },
-	attributes1: { type: String },
-	category: { type: String },      // Used to categorize widgets.
-	priorityId: { type: String },    // Used to prioritize display order.
-	parent: { type: String },
-	children: { type: String },
-	url: { type: String },
-	fileType: { type: String },
+	createdTimeStamp: { type: Date, default: Date.now },
+	size: Number,           // on by default; the size of the file
+	mimetype: String,       // on by default; the mime type of the file
+	path: String,           // the path (e.g directory) the file is stored in; not the full path to the file
+	originalname: String,   // the original (uploaded) name of the file; useful when filename is generated
+	url: String,            // publicly accessible URL of the stored file
+	assetType: { type: Types.Select, required: true, initial: true, options: [
+		{ value: 'agenda', label: 'Agenda' },
+		{ value: 'minutes', label: 'Meeting Minutes' },
+		{ value: 'portraits', label: 'Member Portrait' },
+	] },      // determins the file's upload subfolder
 
 });
 
